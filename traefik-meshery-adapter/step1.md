@@ -1,5 +1,8 @@
 This session will auto-install **`minikube`** and set up other environment variables, necessary to run Meshery for you. This may take up to 2 minutes. 
 
+This environment has a 
+`launch.sh`{{execute}}
+
 After the environment has been setup, you may check up on your cluster nodes by running:
 `kubectl get nodes`{{execute}}
 
@@ -7,7 +10,7 @@ After the environment has been setup, you may check up on your cluster nodes by 
 
 Meshery can be downloaded, installed, deployed and auto-launched with a single command:
 
-`curl -L https://git.io/meshery | PLATFORM=docker bash -`{{execute}}
+`curl -L https://git.io/meshery | ADAPTERS=traefik PLATFORM=docker bash -`{{execute}}
 
 **Congratulations!** You have successfully installed Meshery.
 
