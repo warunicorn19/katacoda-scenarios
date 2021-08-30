@@ -1,21 +1,23 @@
 {
-  "title": "traefik mesh lab",
-  "description": "lab",
+  "title": "Working with Meshery and Traefik Mesh",
+  "description": "Meshing around with the Meshery adapter for Traefik Mesh",
   "difficulty": "Beginner",
-  "time": "1 hour",
+  "time": "10 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Let's get meshing!",
+        "text": "intro.md",
+        "courseData": "step1-background.sh",
+        "code": "step1-foreground.sh"
+      },
+      {
+        "title": "Deploy Traefik Mesh",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Run a sample app",
         "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
       }
     ],
     "intro": {
@@ -23,12 +25,23 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "auth.json", "target": "/root", "chmod": "+x"},
+          {"file": "shell.sh", "target": "/root", "chmod": "+x"}
+      ]
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uieditorpath": "/root/example",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["*test", "./test/*", "./logs"],
+    "showdashboard": true,
+    "dashboards": [{"name": "Meshery Server", "port": 9081},{"name": "Emojivoto", "port": 8080}],
+    "uilayout": "terminal-iframe"
   },
   "backend": {
-    "imageid": "golang:1.14"
+    "imageid": "kubernetes-cluster-running"
   }
 }
