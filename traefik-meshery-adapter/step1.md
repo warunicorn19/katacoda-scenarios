@@ -1,6 +1,4 @@
-This session will auto-install **`minikube`** and set up other environment variables, necessary to run Meshery for you. This may take up to 2 minutes. 
-
-This environment has a 
+To install a Kubernetes cluster in this environment run:
 `launch.sh`{{execute}}
 
 After the environment has been setup, you may check up on your cluster nodes by running:
