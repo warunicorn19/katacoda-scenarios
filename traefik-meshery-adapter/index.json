@@ -28,7 +28,8 @@
       },
       "assets": {
         "host01": [
-            {"file": "auth.json", "target": "/root", "chmod": "+x"}
+            {"file": "auth.json", "target": "/root", "chmod": "+x"},
+            {"file": "launch.sh", "target": "/root", "chmod": "+x"}
         ]
       }
     },

@@ -3,7 +3,7 @@ echo "Waiting for the environment to be set up"
 
 sleep 8s
 
-echo "Setting up a Minikube cluster"
+echo "Setting up Kubernetes"
 
 sleep 10s
 
@@ -27,4 +27,4 @@ fi
 
 cd $HOME/.kube && kubectl config view --minify --flatten > config.yaml && mv config.yaml config
 
-echo "Your environment has been set up with a Minikube cluster. You may now begin the tutorial"
+echo "Your environment has been set up with Kubernetes running. You may now begin the tutorial"
